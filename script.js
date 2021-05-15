@@ -1,4 +1,4 @@
-//connects the "Multiply" button to the multiply function
+// connects the "Multiply" button to the multiply function
 document.getElementById('multiply').addEventListener('click', multiply)
 
 // declares variables and sets them to 0
@@ -16,6 +16,7 @@ function multiply () {
   two = parseInt(two)
   negative = false
 
+  // does all the math for both positive and negative numbers
   if (one < 0) {
     negative = !negative
     one = Math.abs(one)
@@ -32,5 +33,6 @@ function multiply () {
   if (negative) {
     answer = 0 - answer
   }
+  // displays answer on webpage under the textboxes
   document.getElementById('answer').innerHTML = answer
 }
